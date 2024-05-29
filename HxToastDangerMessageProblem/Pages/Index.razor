@@ -4,9 +4,19 @@
 
 <h1>Hello, World!</h1>
 
-<HxButton CssClass="btn btn-primary" OnClick="@(() => AddError("The fatal error message goes here..."))">
-    <span>Break @nameof(IHxMessengerService) (show error)!</span>
-</HxButton>
-<HxButton CssClass="btn btn-primary" OnClick="@(() => AddWarning("The warning message goes here, and it'll appear because  returns false for ThemeColor.Warning."))">
-    <span>Show warning!</span>
-</HxButton>
+<div class="row">
+    <a href="https://github.com/havit/Havit.Blazor/issues/816">https://github.com/havit/Havit.Blazor/issues/816</a>
+</div>
+
+<div class="row d-flex flex-column">
+    <div class="m-1">
+        <HxButton CssClass="btn btn-primary" OnClick="@(() => AddError("The fatal error message goes here..."))">
+            <span>Break @nameof(IHxMessengerService) (show error)!</span>
+        </HxButton>
+    </div>
+    <div class="m-1">
+        <HxButton CssClass="btn btn-primary" OnClick="@(() => AddWarning("The warning message goes here, and it'll appear because HasContrastColor() returns false for ThemeColor.Warning."))">
+            <span>Show warning!</span>
+        </HxButton>
+    </div>
+</div>
