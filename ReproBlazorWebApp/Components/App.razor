@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+    <link rel="stylesheet" href="@Assets["app.css"]" />
+    <link rel="stylesheet" href="@Assets["ReproBlazorWebApp.styles.css"]" />
+    <ImportMap />
+    <HeadOutlet />
+
+    @((MarkupString)HxSetup.RenderBootstrapCssReference())
+    <link href="_content/Havit.Blazor.Components.Web.Bootstrap/defaults.css" rel="stylesheet" />
+</head>
+
+<body>
+    <HxMessenger Position="ToastContainerPosition.TopEnd" />
+
+    <Routes @rendermode="RenderMode.InteractiveServer" />
+    <script src="_framework/blazor.web.js"></script>
+
+    @((MarkupString)HxSetup.RenderBootstrapJavaScriptReference())
+</body>
+
+</html>

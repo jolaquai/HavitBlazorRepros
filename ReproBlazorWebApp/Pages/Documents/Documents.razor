@@ -1,0 +1,30 @@
+﻿@page "/Documents/{*subpath}"
+
+<h1>Documents</h1>
+<div class="mb-1"><a href="https://github.com/jolaquai/HavitBlazorRepros">https://github.com/jolaquai/HavitBlazorRepros</a></div>
+<div class="mb-2"><a href="https://github.com/havit/Havit.Blazor/issues/1021">https://github.com/havit/Havit.Blazor/issues/1021</a></div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-auto">
+            <HxSidebar>
+                <ItemsTemplate>
+                    <HxSidebarItem Icon="BootstrapIcon.FolderFill" Text="Root" Href="/Documents/test">
+                        <HxSidebarItem Icon="BootstrapIcon.FolderFill" Text="Some subitem" Href="/Documents/subitem/1" />
+                        <HxSidebarItem Icon="BootstrapIcon.FolderFill" Text="Another" Href="/Documents/subitem/2">
+                            <HxSidebarItem Icon="BootstrapIcon.FolderFill" Text="subsub 1" Href="/Documents/subitem/2/1" />
+                            <HxSidebarItem Icon="BootstrapIcon.FolderFill" Text="subsub 2" Href="/Documents/subitem/2/2" />
+                        </HxSidebarItem>
+                    </HxSidebarItem>
+                </ItemsTemplate>
+            </HxSidebar>
+        </div>
+        <div class="col">
+            My content goes here...
+        </div>
+    </div>
+</div>
+
+@code{
+    [Parameter] public string Subpath { get; set; }
+}
